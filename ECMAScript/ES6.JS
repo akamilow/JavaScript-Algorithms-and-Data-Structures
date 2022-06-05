@@ -98,3 +98,72 @@ const HIGH_TEMPERATURES = {
   tomorrow: 80
 };
 const {today, tomorrow} = HIGH_TEMPERATURES;
+
+// Use Destructuring Assignment to Assign Variables
+const HIGHTEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+// Only change code below this line
+const {today: highToday} = HIGHTEMPERATURES;
+const {tomorrow: highTomorrow} = HIGHTEMPERATURES; 
+// Only change code above this line
+console.log(highToday) // 77
+
+const LOCAL_FORECAST = {
+  yesterday: { low: 61, high: 75 },
+  today: { low: 64, high: 77 },
+  tomorrow: { low: 68, high: 80 }
+};
+// Only change code below this line
+const { today: { low: lowToday }} = LOCAL_FORECAST;
+const { today: { high: HighToday }} = LOCAL_FORECAST;
+// Only change code above this line
+
+// Use Destructuring Assignment to Assign Variables from Arrays
+let a = 8, b = 6;
+// Only change code below this line
+[a, b] = [b, a] // a = 6, b = 8
+
+// Use Destructuring Assignment with the Rest Parameter to Reassign Array Elements
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function removeFirstTwo(list) {
+  // Only change code below this line
+  const [a, b, ...arr] = list; // Change this line
+  // Only change code above this line
+  return arr;
+}
+const Arr = removeFirstTwo(source); // [3, 4, 5, 6, 7, 8, 9, 10]
+
+// Use Destructuring Assignment to Pass an Object as a Function's Parameters
+const stats = {
+  max: 56.78,
+  standard_deviation: 4.34,
+  median: 34.54,
+  mode: 23.87,
+  min: -0.75,
+  average: 35.85
+};
+// Only change code below this line
+// const half = (stats) => (stats.max + stats.min) / 2.0;
+const half = ({max, min}) => (max + min) / 2.0;
+// Only change code above this line
+console.log(half(stats)) // 28.015
+
+// Create Strings using Template Literals
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+  for (let i = 0; i < arr.length; i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`);
+  }
+  // Only change code above this line
+  return failureItems;
+}
+const failuresList = makeList(result.failure);
