@@ -167,3 +167,57 @@ function makeList(arr) {
   return failureItems;
 }
 const failuresList = makeList(result.failure);
+
+// Write Concise Object Literal Declarations Using Object Property Shorthand
+const getMousePosition = (x, y) => ({
+  x: x,
+  y: y
+});
+//--------------------
+const createPerson = (name, age, gender) => {
+  // Only change code below this line
+  return { name, age, gender };
+  // Only change code above this line
+};
+
+// Write Concise Declarative Functions with ES6
+const person = {
+  name: "Taylor",
+  sayHello: function() {
+    return `Hello! My name is ${this.name}.`;
+  }
+};
+//--------------------------------------
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+
+// Use class Syntax to Define a Constructor Function
+var SpaceShuttle = function(targetPlanet){
+  this.targetPlanet = targetPlanet;
+}
+var zeus = new SpaceShuttle('Jupiter');
+
+class SpaceShuttle {
+  constructor(targetPlanet) {
+    this.targetPlanet = targetPlanet;
+  }
+}
+const zeus = new SpaceShuttle('Jupiter');
+//----------------------------
+// Only change code below this line
+class Vegetable {
+  constructor(name) {
+    this.name = name;
+  }
+}
+// Only change code above this line
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
