@@ -252,3 +252,16 @@ temp = thermos.temperature; // 26 in Celsius
   </body>
 </html>
 
+// Use export to Share a Code Block
+
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
+
+// Reuse JavaScript Code Using import
