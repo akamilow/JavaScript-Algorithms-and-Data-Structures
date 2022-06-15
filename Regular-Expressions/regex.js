@@ -12,3 +12,8 @@ let resultt = waldoRegex.test(waldoIsHiding);
 let petString = "James has a pet cat.";
 let petRegex = /dog|cat|bird|fish/; // Change this line
 let resulttt = petRegex.test(petString);
+
+// Ignore Case While Matching, using i flag
+let myStringg = "freeCodeCamp";
+let fccRegex = /freeCodeCamp/i; // Change this line
+let resultttt = fccRegex.test(myString); //FrEeCoDeCamp FReeCodeCAmp
