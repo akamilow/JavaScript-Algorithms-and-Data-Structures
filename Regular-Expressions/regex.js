@@ -59,3 +59,21 @@ Both of these test calls would return true.
 let exampleStr = "Let's have fun with regular expressions!";
 let unRegex = /.un/; // Change this line
 let reSult = unRegex.test(exampleStr);
+
+// Match Single Character with Multiple Possibilities
+/**
+ * let bigStr = "big";
+let bagStr = "bag";
+let bugStr = "bug";
+let bogStr = "bog";
+let bgRegex = /b[aiu]g/;
+bigStr.match(bgRegex);
+bagStr.match(bgRegex);
+bugStr.match(bgRegex);
+bogStr.match(bgRegex);
+In order, the four match calls would return the values ["big"], ["bag"], ["bug"], and null.
+ */
+
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Change this line
+let reslt = quoteSample.match(vowelRegex); // Change this line
