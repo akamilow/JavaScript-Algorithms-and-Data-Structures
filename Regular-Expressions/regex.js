@@ -28,3 +28,19 @@ let resultttt = fccRegex.test(myString); //FrEeCoDeCamp FReeCodeCAmp
 let extractStr = "Extract the word 'coding' from this string.";
 let codingRegex = /coding/; // Change this line
 let resul = extractStr.match(codingRegex); // Change this line
+
+// Find More Than the First Match
+/**
+ * To search or extract a pattern more than once, you can use the global search flag: g.
+ * let testStr = "Repeat, Repeat, Repeat";
+let ourRegex = /Repeat/;
+testStr.match(ourRegex);
+
+let repeatRegex = /Repeat/g;
+testStr.match(repeatRegex);
+And here match returns the value ["Repeat", "Repeat", "Repeat"]
+ * */ 
+
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /Twinkle/ig; // Change this line
+let Result = twinkleStar.match(starRegex);; // Change this line
