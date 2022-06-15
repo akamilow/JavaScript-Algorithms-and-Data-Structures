@@ -17,3 +17,14 @@ let resulttt = petRegex.test(petString);
 let myStringg = "freeCodeCamp";
 let fccRegex = /freeCodeCamp/i; // Change this line
 let resultttt = fccRegex.test(myString); //FrEeCoDeCamp FReeCodeCAmp
+
+// Extract Matches, using .match() 
+/**
+ * Note that the .match syntax is the "opposite" of the .test method you have been using thus far:
+
+'string'.match(/regex/);
+/regex/.test('string');
+ */
+let extractStr = "Extract the word 'coding' from this string.";
+let codingRegex = /coding/; // Change this line
+let resul = extractStr.match(codingRegex); // Change this line
