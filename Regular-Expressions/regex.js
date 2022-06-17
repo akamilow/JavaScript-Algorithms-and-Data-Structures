@@ -77,3 +77,8 @@ In order, the four match calls would return the values ["big"], ["bag"], ["bug"]
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // Change this line
 let reslt = quoteSample.match(vowelRegex); // Change this line
+
+// Match Letters of the Alphabet
+let quoteSamplee = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/ig; // Change this line
+let resu =  quoteSamplee.match(alphabetRegex);; // Change this line
