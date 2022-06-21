@@ -104,3 +104,60 @@ let ressult = difficultSpelling.match(myRegex);
 let chewieRegex = /Aa*/; // Change this line
 // Only change code above this line
 let reesult = chewieQuote.match(chewieRegex);
+
+// Find Characters with Lazy Matching
+let text = "<h1>Winter is coming</h1>";
+let myyRegex = /<.*?>/; // Change this line
+let rresult = text.match(myRegex);
+
+// Find One or More Criminals in a Hunt
+let reCriminals = /C+/; // Change this line
+
+// Match Beginning String Patterns
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/; // Change this line
+let rrresult = calRegex.test(rickyAndCal);
+
+// Match Ending String Patterns
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/; // Change this line
+let resulllt = lastRegex.test(caboose);
+
+// Match All Letters and Numbers
+let quoteeSample = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let resssult = quoteSample.match(alphabetRegexV2).length;
+
+// Match Everything But Letters and Numbers
+let quooteSample = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let resuult = quoteSample.match(nonAlphabetRegex).length;
+
+// Match All Numbers
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let resuullt = movieName.match(numRegex).length;
+
+// Match All Non-Numbers
+let movieNaame = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let rreesult = movieName.match(noNumRegex).length;
+
+/**
+ * Restrict Possible Usernames
+Usernames are used everywhere on the internet. They are what give users a unique identity on their favorite sites.
+You need to check all the usernames in a database. Here are some simple rules that users have to follow when creating their username.
+
+* Usernames can only use alpha-numeric characters.
+* The only numbers in the username have to be at the end. There can be zero or more of them at the end. Username cannot start with the number.
+* Username letters can be lowercase and uppercase.
+* Usernames have to be at least two characters long. A two-character username can only use alphabet letters as characters.
+ */
+let username = "JackOfAllTrades";
+let userCheck = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i; // Change this line
+let resulltt = userCheck.test(username);
+
+// Match Whitespace
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/g; // Change this line
+let reessult = sample.match(countWhiteSpace);
