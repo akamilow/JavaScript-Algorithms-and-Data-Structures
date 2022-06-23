@@ -230,3 +230,37 @@ The test method here would return true.
 let myStrring = "Eleanor Roosevelt";
 let myReegex = /(Franklin|Eleanor).*Roosevelt/; // Change this line
 let resrult = myRegex.test(myString);
+
+// Reuse Patterns Using Capture Groups
+/**
+let repeatRegex = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+ */
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let resssuuult = reRegex.test(repeatNum);
+
+// Use Capture Groups to Search and Replace
+/**
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+The replace call would return the string The sky is blue.
+ */
+
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let reeesssult = str.replace(fixRegex, replaceText);
+
+
+// Remove Whitespace from Start and End
+/**
+ * Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
+ */
+
+ let hello = "   Hello, World!  ";
+ let wsRegex = /^\s+|\s+$/g; // Change this line
+ let rsult = hello.replace(wsRegex, ""); // Change this line
