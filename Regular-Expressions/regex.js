@@ -193,3 +193,8 @@ let reesssult = haRegex.test(haStr);
 let timStr = "Timmmmber";
 let timRegex = /Timm{3}ber/; // Change this line
 let reessuult = timRegex.test(timStr);
+
+// Check for All or None
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let reeesult = favRegex.test(favWord);
