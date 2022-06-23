@@ -171,3 +171,20 @@ let resullttt = sample.match(countNonWhiteSpace);
 let ohStr = "Ohhh no";
 let ohRegex = /oh{3,6}\sno/i; // Change this line
 let ressuult = ohRegex.test(ohStr); // true
+
+// Specify Only the Lower Number of Matches
+
+/**
+let A4 = "haaaah";
+let A2 = "haah";
+let A100 = "h" + "a".repeat(100) + "h";
+let multipleA = /ha{3,}h/;
+multipleA.test(A4);
+multipleA.test(A2);
+multipleA.test(A100);
+In order, the three test calls would return true, false, and true.
+ */
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/; // Change this line
+let reesssult = haRegex.test(haStr);
