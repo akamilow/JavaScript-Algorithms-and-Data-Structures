@@ -198,3 +198,35 @@ let reessuult = timRegex.test(timStr);
 let favWord = "favorite";
 let favRegex = /favou?rite/; // Change this line
 let reeesult = favRegex.test(favWord);
+
+// Positive and Negative Lookahead
+/**
+let quit = "qu";
+let noquit = "qt";
+let quRegex= /q(?=u)/;
+let qRegex = /q(?!u)/;
+quit.match(quRegex);
+noquit.match(qRegex);
+Both of these match calls would return ["q"].
+
+A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password checker that looks for between 3 and 6 characters and at least one number:
+
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+checkPass.test(password);
+ */
+
+let sampleWord = "astronaut";
+let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
+let reessssult = pwRegex.test(sampleWord);
+
+// Check For Mixed Grouping of Characters
+/**
+let testStr = "Pumpkin";
+let testRegex = /P(engu|umpk)in/;
+testRegex.test(testStr);
+The test method here would return true.
+ */
+let myStrring = "Eleanor Roosevelt";
+let myReegex = /(Franklin|Eleanor).*Roosevelt/; // Change this line
+let resrult = myRegex.test(myString);
