@@ -188,3 +188,8 @@ In order, the three test calls would return true, false, and true.
 let haStr = "Hazzzzah";
 let haRegex = /Haz{4,}ah/; // Change this line
 let reesssult = haRegex.test(haStr);
+
+// Specify Exact Number of Matches
+let timStr = "Timmmmber";
+let timRegex = /Timm{3}ber/; // Change this line
+let reessuult = timRegex.test(timStr);
