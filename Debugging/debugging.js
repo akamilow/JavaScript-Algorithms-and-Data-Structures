@@ -7,3 +7,5 @@ console.log(a);
 // Only change code below this line
 let sumAB = a + b;
 console.log(sumAB);
+
+// Understanding the Differences between the freeCodeCamp and Browser Console
