@@ -43,3 +43,5 @@ console.log(`Sum of array values is: ${arraySum}`);
 // Catch Mixed Usage of Single and Double Quotes
 let innerHtml = "<p>Click here to <a href='#Home'>return home</a></p>";
 console.log(innerHtml);
+
+// Catch Use of Assignment Operator Instead of Equality Operator
