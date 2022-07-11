@@ -99,3 +99,14 @@ function filteredArray(arr, elem) {
   return newArr;
 }
 console.log(filteredArray([[3, 2, 3], [1, 6, 3], [3, 13, 26], [19, 3, 9]], 3)); // filteredArray([[10, 8, 3], [14, 6, 23], [3, 18, 6]], 18) should return [[10, 8, 3], [14, 6, 23]]
+
+// Create complex multi-dimensional arrays
+let myNestedArray = [
+  // Only change code below this line
+  ['unshift', false, 1, 2, 3, 'complex', 'nested'],
+  ['loop', 'shift', 6, 7, 1000, 'method'],
+  ['concat', false, true, 'spread', 'array',['deep']],
+  ['mutate', 1327.98, 'splice', 'slice', 'push',[['deeper']]],
+  ['iterate', 1.3849, 7, '8.4876', 'arbitrary', 'depth',[[['deepest']]]]
+  // Only change code above this line
+];
