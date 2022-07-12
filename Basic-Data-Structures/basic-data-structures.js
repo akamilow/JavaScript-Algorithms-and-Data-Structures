@@ -196,3 +196,29 @@ function isEveryoneHere(userObj) {
   return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(name => userObj.hasOwnProperty(name))
 }
 console.log(isEveryoneHere(users));
+
+// Iterate Through the Keys of an Object with a for...in Statement
+const userss = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(usersObj) {
+  // Only change code below this line
+  let count = 0;
+  for (let i in usersObj) {
+    if (usersObj[i].online === true) {
+      count++;
+    }
+  }
+  return count;
+  // Only change code above this line
+}
+console.log(countOnline(userss));
