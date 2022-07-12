@@ -170,3 +170,29 @@ delete foods.plums;
 delete foods.strawberries;
 // Only change code above this line
 console.log(foods);
+
+// Check if an Object has a Property
+let users = {
+  Alan: {
+    age: 27,
+    online: true
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: true
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function isEveryoneHere(userObj) {
+  // Only change code below this line
+  return ['Alan', 'Jeff', 'Sarah', 'Ryan'].every(name => userObj.hasOwnProperty(name))
+}
+console.log(isEveryoneHere(users));
