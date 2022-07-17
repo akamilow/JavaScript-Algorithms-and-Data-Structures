@@ -67,3 +67,18 @@ function confirmEnding(str, target) {
     }
 }
 confirmEnding("Bastian", "n");
+
+// Repeat a String Repeat a String
+function repeatStringNumTimes(str, num) {
+    let newStr = "";
+    if (num < 0) {
+        return newStr;
+    } else {
+        for (let i = 0; i < num; i++) {
+            newStr += str;
+        }
+        return newStr;
+    }
+}
+  
+repeatStringNumTimes("abc", 3);
