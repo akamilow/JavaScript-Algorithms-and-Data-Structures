@@ -112,5 +112,17 @@ function booWho(bool) {
     }
     return false;
 }
-  
-  booWho(null);
+booWho(null);
+
+// Title Case a Sentence
+function titleCase(str) {
+    let words = str.split(' ');
+    let newStr = "";
+    for (let i = 0; i < words.length; i++) {
+        let firstLetter = words[i].substring(0, 1).toUpperCase();
+        let restOfWords = words[i].substring(1).toLowerCase();
+        newStr += firstLetter + restOfWords + " ";
+    }
+    return newStr;
+}
+titleCase("I'm a little tea pot");
