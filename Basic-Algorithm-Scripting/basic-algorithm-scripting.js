@@ -115,6 +115,7 @@ function booWho(bool) {
 booWho(null);
 
 // Title Case a Sentence
+// My Solution
 function titleCase(str) {
     let words = str.split(' ');
     let newStr = "";
@@ -125,4 +126,13 @@ function titleCase(str) {
     }
     return newStr;
 }
-titleCase("I'm a little tea pot");
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT");
+// freeCodeCamp solution
+/*
+const newTitle = str.split(" ");
+const updatedTitle = [];
+for (let st in newTitle) {
+  updatedTitle[st] = newTitle[st][0].toUpperCase() + newTitle[st].slice(1).toLowerCase();
+}
+return updatedTitle.join(" ");
+*/
