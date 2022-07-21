@@ -145,3 +145,21 @@ function frankenSplice(arr1, arr2, n) {
     return newArr;
 }
 frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+// Falsy Bouncer
+function bouncer(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i]) {   // if the element is truthy
+            newArr.push(arr[i]);
+        }
+    }
+    return newArr;
+}
+bouncer([7, "ate", "", false, 9]);
+
+/* // Alt Solution
+function bouncer(arr) {
+    return arr.filter(Boolean);
+}
+*/
