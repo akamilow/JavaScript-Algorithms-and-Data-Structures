@@ -170,5 +170,17 @@ function getIndexToIns(arr, num) {
     arr.sort((a, b) => a - b);
     return arr.indexOf(num);
 }
-  
 getIndexToIns([40, 60], 50);
+
+// Mutations
+function mutation(arr) {
+    let first = arr[0].toLowerCase();
+    let second = arr[1].toLowerCase();
+    for (let i = 0; i < second.length; i++) {
+        if (first.indexOf(second[i]) === -1) {
+            return false;
+        }
+    }
+    return true;
+}
+console.log(mutation(["hello", "Hello"]));
