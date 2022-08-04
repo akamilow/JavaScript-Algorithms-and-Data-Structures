@@ -84,3 +84,24 @@ function Dog(name) {
 Dog.prototype.numLegs = 2;
 // Only change code above this line
 let beagle = new Dog("Snoopy");
+
+// Iterate Over All Properties
+function Dog(name) {
+    this.name = name;
+}
+Dog.prototype.numLegs = 4;
+  
+let beaglee = new Dog("Snoopy");
+  
+let ownPropss = [];
+let prototypeProps = [];
+// Only change code below this line
+for (let property in beagle) {
+    if(beagle.hasOwnProperty(property)) {
+      ownPropss.push(property);
+    } else {
+      prototypeProps.push(property);
+    }
+}
+//console.log(ownProps);
+//console.log(prototypeProps);
