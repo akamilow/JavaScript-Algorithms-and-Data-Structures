@@ -9,6 +9,9 @@ arr = [1, 3, 5, 7, 9]
 The minimum sum is 1 + 3 + 5 + 7 = 16
 The maximum sum is 3 + 5 + 7 + 9 = 24
 
+input: [1, 3, 5, 7, 9]
+output:
+16 24
 */
 function miniMaxSum(arr) {
     let minArray = [];
