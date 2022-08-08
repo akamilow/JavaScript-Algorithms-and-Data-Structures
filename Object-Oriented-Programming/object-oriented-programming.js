@@ -204,3 +204,16 @@ Animal.prototype = {
 // Only change code below this line
 let duck = Object.create(Animal.prototype); // Change this line
 let beaggle = Object.create(Animal.prototype); // Change this line
+
+// Set the Childs Prototype to an Instance of the Parent
+function Animal() { }
+Animal.prototype = {
+    constructor: Animal,
+    eat: function() {
+      console.log("nom nom nom");
+    }
+};
+function Dog() { }
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+let beaagle = new Dog();
