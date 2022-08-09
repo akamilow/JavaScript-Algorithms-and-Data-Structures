@@ -229,3 +229,16 @@ let ducck = new Bird();
 Bird.prototype.constructor = Bird;
 let beagglle = new Dog();
 Dog.prototype.constructor = Dog;
+
+// Add Methods After Inheritance
+function Animal() { }
+Animal.prototype.eat = function() { console.log("nom nom nom"); };
+function Dog() { }
+// Only change code below this line
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+Dog.prototype.bark = function() {
+  console.log("Woof!");
+};
+// Only change code above this line
+let beagllee = new Dog();
