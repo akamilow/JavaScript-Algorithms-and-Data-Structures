@@ -217,3 +217,15 @@ function Dog() { }
 // Only change code below this line
 Dog.prototype = Object.create(Animal.prototype);
 let beaagle = new Dog();
+
+// Reset an Inherited Constructor Property
+function Animal() { }
+function Bird() { }
+function Dog() { }
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+// Only change code below this line
+let ducck = new Bird();
+Bird.prototype.constructor = Bird;
+let beagglle = new Dog();
+Dog.prototype.constructor = Dog;
