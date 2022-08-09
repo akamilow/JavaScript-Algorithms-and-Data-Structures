@@ -283,6 +283,6 @@ function Bird() {
 }
 
 // Understand the Immediately Invoked Function Expression (IIFE)
-(function makeNest() {
+(function() {
     console.log("A cozy nest is ready");
 })();
