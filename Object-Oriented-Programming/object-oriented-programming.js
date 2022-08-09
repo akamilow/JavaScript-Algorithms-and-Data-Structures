@@ -242,3 +242,5 @@ Dog.prototype.bark = function() {
 };
 // Only change code above this line
 let beagllee = new Dog();
+
+// Override Inherited Methods
