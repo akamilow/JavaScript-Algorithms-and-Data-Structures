@@ -23,7 +23,6 @@ Sample Input:
 S;M;plasticCup()
 S;C;LargeSoftwareBook
 S;V;pictureFrame
-
 C;M;white sheet of paper
 C;C;coffee machine
 C;V;mobile phone
@@ -39,57 +38,70 @@ mobilePhone
 */
 
 function processData(input) {
-    let inputArr = input.split(';');
-    let operation = inputArr[0];
-    let type = inputArr[1];
-    let name = inputArr[2].split(' ');
-    let result = '';
+    let inputArr = input.split('\n');
+    let result = [];
 
-    if (operation === 'S' && type === 'M') {
-        let nombre = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
-        let nombreModulo = nombre.replace(/\(|\)/g, '');
-        result = nombreModulo;
-    }
+    for (let i = 0; i < inputArr.length; i++) {
+        let inputArr2 = inputArr[i].split(';');
+        let operation = inputArr2[0];
+        let type = inputArr2[1];
+        let name = inputArr2[2].split(' ');
 
-    if (operation === 'S' && type === 'C') {
-        let nombreClase = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
-        result = nombreClase.charAt(0).toUpperCase() + nombreClase.slice(1);
+        if (operation === 'S' && type === 'M') {
+            let nombre = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
+            let nombreModulo = nombre.replace(/\(|\)/g, '');
+            result.push(nombreModulo);
+        }
+
+        if (operation === 'S' && type === 'C') {
+            let nombreClase = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
+            result.push(nombreClase);
+        }
+
+        if (operation === 'S' && type === 'V') {
+            let nombreVariable = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
+            result.push(nombreVariable);
+        }
+
+        if (operation === 'C' && type === 'M') {
+            let nombre = name;
+            let nombreArr = []
+            nombreArr.push(nombre[0].toLowerCase());
+            for (let i = 1; i < nombre.length; i++) {
+                nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
+            }
+            result.push(nombreArr.join('') + '()');
+        }
+
+        if (operation === 'C' && type === 'C') {
+            let nombre = name;
+            let nombreArr = []
+            for (let i = 0; i < nombre.length; i++) {
+                nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
+            }
+            result.push(nombreArr.join(''));
+        }
+
+        if (operation === 'C' && type === 'V') {
+            let nombre = name;
+            let nombreArr = []
+            nombreArr.push(nombre[0].toLowerCase());
+            for (let i = 1; i < nombre.length; i++) {
+                nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
+            }
+            result.push(nombreArr.join(''));
+        }
     }
     
-    if (operation === 'S' && type === 'V') {
-        let nombreVariable = name.join('').split(/(?=[A-Z])/).map(s => s.toLowerCase()).join(' ');
-        result = nombreVariable;
+    for (let i of result) {
+        console.log(i);
     }
-    
-    if (operation === 'C' && type === 'M') {
-        let nombre = name;
-        let nombreArr = []
-        nombreArr.push(nombre[0].toLowerCase());
-        for (let i = 1; i < nombre.length; i++) {
-            nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
-        }
-        result = nombreArr.join('') + '()';
-    }
-
-    if (operation === 'C' && type === 'C') {
-        let nombre = name;
-        let nombreArr = []
-        for (let i = 0; i < nombre.length; i++) {
-            nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
-        }
-        result = nombreArr.join('');
-    }
-
-    if (operation === 'C' && type === 'V') {
-        let nombre = name;
-        let nombreArr = []
-        nombreArr.push(nombre[0].toLowerCase());
-        for (let i = 1; i < nombre.length; i++) {
-            nombreArr.push(nombre[i].charAt(0).toUpperCase() + nombre[i].slice(1));
-        }
-        result = nombreArr.join('');
-    }
-    console.log(result);
-
 } 
-processData('C;V;mobile phone');
+
+processData(
+    'C;V;can of coke' + '\n' +
+    'S;M;sweatTea()' + '\n' +
+    'S;V;epsonPrinter' + '\n' +
+    'C;M;santa claus' + '\n' +
+    'C;C;mirror'
+);
