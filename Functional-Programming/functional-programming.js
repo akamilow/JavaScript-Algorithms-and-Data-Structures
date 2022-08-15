@@ -44,3 +44,5 @@ console.log(
   tea4GreenTeamFCC,
   tea4BlackTeamFCC
 );
+
+// Understand the Hazards of Using Imperative Code
