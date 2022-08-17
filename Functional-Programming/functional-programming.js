@@ -239,10 +239,26 @@ const watchList = [
       "Response": "True"
     }
   ];
-  // Only change code below this line
-  const ratings = watchList.map(item => ({
+// Only change code below this line
+const ratings = watchList.map(item => ({
     title: item["Title"],
     rating: item["imdbRating"]
-  }));
+}));
+// Only change code above this line
+console.log(JSON.stringify(ratings));
+
+// Implement map on a Prototype
+// The global variable
+const s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  const newArray = [];
+  // Only change code below this line
+  this.forEach(x => newArray.push(callback(x)));
   // Only change code above this line
-  console.log(JSON.stringify(ratings));
+  return newArray;
+};
+
+const new_s = s.myMap(function(item) {
+  return item * 2;
+});
