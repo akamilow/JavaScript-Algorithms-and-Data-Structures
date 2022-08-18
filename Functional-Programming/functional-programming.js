@@ -383,3 +383,21 @@ const filteredList = watchLisst
 .map(movie => ({ title: movie["Title"], rating: movie["imdbRating"] }));
 // Only change code above this line
 console.log(filteredList);
+
+// Implement the filter Method on a Prototype
+// The global variable
+const ss = [23, 65, 98, 5];
+Array.prototype.myFilter = function(callback) {
+  // Only change code below this line
+  const newArray = [];
+  this.forEach(function(x) {
+    if (callback(x) == true) {
+      newArray.push(x);
+    }
+  });
+  // Only change code above this line
+  return newArray;
+};
+const new_ss = s.myFilter(function(item) {
+  return item % 2 === 1;
+});
